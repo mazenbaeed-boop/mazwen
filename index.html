@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulender | شركة بلندر للمقاولات</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <!-- Language switch -->
+  <div class="lang-switch">
+    <button id="arabicBtn">العربية</button>
+    <button id="englishBtn">EN</button>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">Bulender</div>
+        <nav class="nav">
+          <a href="#home" class="nav-link">الرئيسية</a>
+          <a href="#services" class="nav-link">الخدمات</a>
+          <a href="#about" class="nav-link">من نحن</a>
+          <a href="#contact" class="nav-link">تواصل</a>
+        </nav>
+        <div class="cta-wrap">
+          <button class="cta" id="requestBtn">اطلب الخدمة</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content" data-anim="slide-up">
+          <h1>نبني المستقبل مع بلندر</h1>
+          <p>حلول متكاملة للمقاولات والتشييد، تنفيذ محترف، وتسليم في المواعيد.</p>
+          <div class="hero-actions">
+            <button class="btn main-btn" id="openQuick">اطلب عرض</button>
+            <a href="#projects" class="btn ghost">مشاريعنا</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong data-count="120">0</strong><span>مشروع منجز</span></div>
+            <div class="stat"><strong data-count="15">0</strong><span>سنة خبرة</span></div>
+            <div class="stat"><strong data-count="60">0</strong><span>عميل راضي</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" data-anim="fade-in">
+          <img src="images/engineer.png" alt="مهندس" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>خدماتنا</h2>
+        <div class="cards">
+          <div class="card" data-anim="pop"><img src="images/icon1.png" alt=""><h3>إدارة المشاريع</h3><p>متابعة دقيقة من البداية للنهاية.</p></div>
+          <div class="card" data-anim="pop"><img src="images/icon2.png" alt=""><h3>الهياكل والإنشاءات</h3><p>أساسات وهياكل متينة حسب المعايير.</p></div>
+          <div class="card" data-anim="pop"><img src="images/icon3.png" alt=""><h3>التشطيبات</h3><p>تشطيبات داخلية وخارجية عالية الجودة.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container about-inner" data-anim="slide-up">
+        <div class="about-text">
+          <h2>من نحن</h2>
+          <p>شركة بلندر للمقاولات تقدم خدمات شاملة في البناء والتشطيب مع التزام تام بالمواصفات والجودة.</p>
+          <a class="btn" href="#contact">تواصل معنا</a>
+        </div>
+        <div class="about-img"><img src="images/about.jpg" alt="about"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>مشاريعنا</h2>
+        <div class="projects-grid">
+          <div class="proj"><img src="images/proj1.jpg" alt=""><h4>مبنى سكني حديث</h4></div>
+          <div class="proj"><img src="images/proj2.jpg" alt=""><h4>مجمع تجاري</h4></div>
+          <div class="proj"><img src="images/proj3.jpg" alt=""><h4>مشروع تشطيب</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-inner">
+        <div class="contact-left" data-anim="slide-up">
+          <h2>تواصل معنا</h2>
+          <p>ارسل طلب عرض وسنعود لك خلال 24 ساعة.</p>
+          <div class="contact-info">
+            <p><strong>الهاتف:</strong> +20 100 000 0000</p>
+            <p><strong>البريد:</strong> info@bulender.com</p>
+          </div>
+        </div>
+        <div class="contact-right" data-anim="fade-in">
+          <form id="contactForm" action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="الاسم" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="text" name="subject" placeholder="الموضوع">
+            <textarea name="message" placeholder="نص الرسالة" rows="5" required></textarea>
+            <button class="btn submit" type="submit">أرسل الرسالة</button>
+            <div id="formMsg" class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Bulender — شركة بلندر للمقاولات</p>
+    </div>
+  </footer>
+
+  <!-- Quick popup form -->
+  <div id="quickModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>اطلب عرض سريع</h3>
+      <form id="quickForm">
+        <input name="q_name" type="text" placeholder="الاسم" required>
+        <input name="q_phone" type="text" placeholder="رقم الهاتف" required>
+        <textarea name="q_details" placeholder="تفاصيل المشروع" rows="4" required></textarea>
+        <button class="btn" type="submit">أرسل</button>
+        <div id="qMsg" class="form-msg"></div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
